@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+          background: linear-gradient(to right, #1FAF8B, #1C7F74, #1A4F59);
+
+
+
+            font-family: sans-serif;
+            color: black;
+            line-height: 1.6;
+        }
+
+        .main-container{
+            display: grid;
+            max-width: 1200px;
+            grid-template-columns: 350px 1fr;
+            gap: 50px;
+            margin: 20px auto;
+            padding-top: 40px;
+            margin: auto;
+        }
+
+        .sidebar{
+            
+            background-color:rgb(3, 22, 21);
+            border: 1px solid ;
+            border-radius: 16px;
+            padding: 40px;
+            height: 90vh;
+            position: sticky;
+            top: 40px;
+
+            
+        }
+
+        .main-content{
+            background-color:rgb(3, 22, 21);
+            border: 1px solid ;
+            border-radius: 16px;
+            padding: 40px;
+        }
+        .Profile{
+            text-align: center;
+        }
+        .Profile img{
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            border: 1px solid #3a3a3a ;
+        }
+        .Profile h2{
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 20px;
+            color: #e0e0e0;
+
+        }
+        .Profile p{
+            background-color: #1C7F74;
+            padding: 5px 15px;
+            color: white;
+            border: 1px solid #1C7F74;
+            font-size: 0.8rem;
+            border-radius: 8px ;
+            display: inline-block;
+            margin-top: 10px;
+
+
+
+        }
+        .contact{
+            margin-top: 30px;
+        border-top: 1px solid #3a3a3a;
+        padding-top: 20px;
+        }
+        .label{
+            font-weight: 500;
+            font-size: 0.8rem;
+            color: #a0a0a0;
+        }
+        .value{
+            color: #e0e0e0;
+            text-decoration: none;
+        }
+        .email,.phone,.location{
+            margin-bottom: 15px;
+        }
+        .social{
+            margin-top: 30px;
+        border-top: 2px solid #3a3a3a;
+        padding-top: 20px;
+        text-align: center;
+        }
+        .social img{
+            height: 24px;
+            width: 24px;
+            margin-left: 5px;
+            filter: grayscale(1) invert(0.7);
+            transition: filter 0.3s ease;
+
+        }
+        .social img :hover{
+            filter: grayscale(0) invert(0);
+        }
+        #navigation{
+        
+            border-bottom:2px solid #3a3a3a;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        nav{
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .active, nav a:hover{
+            color: #1C7F74;
+        }
+        .heading{
+            color: #e0e0e0;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .content {
+    color: #b8d6d2;
+    text-align: justify;
+}
+
+        .line{
+            width: 60px;
+            height: 5px;
+            background-color: #1C7F74;
+            margin-bottom: 15px;
+        }
+        #about{
+            margin-bottom: 40px;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+            gap: 50px;
+            
+        }
+        .item{
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #b8d6d2 ;
+            background: linear-gradient(to right, #1FAF8B, #1C7F74, #1A4F59);
+            text-align: center;
+            margin-top: 20px;
+            transition: transform 0.3s ease,boxshadow 0.3s ease;
+            
+
+        }
+        .item img{
+            height: 40px;
+            width: 40px;
+            filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350 deg) brightness(110%) contrast(101%) ;
+            margin-bottom: 15px;
+        }
+        .item h3{
+            font-size: 1rem;
+            font-size: 500;
+
+        }
+        .item:hover{
+            transform:scale(1.1);
+            box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+
+        }
+        #education{
+            margin-top: 20px;
+        }
+      
+        .year{
+            font-size: 0.9rem;
+            color: #b8d6d2;
+            margin-bottom: 5px;
+        }
+        .degree{
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .college{
+            font-style: italic;
+            color: #b8d6d2;
+            margin-bottom: 10px;
+        }
+        .work{
+            color: #b8d6d2;
+        }
+        .edtech{
+            position: relative;
+            margin-top: 20px;
+        }
+        .edfirst,.edsecond{
+            margin-bottom: 30px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .goal{
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            border: 3px solid #1C7F74;
+            position: absolute;
+            top: 5px;
+            left: 0px;
+            z-index: 5;
+
+        }
+        .liner{
+            position: absolute;
+            width: 2px;
+            top: 0px;
+            bottom: 0px;
+            left: 5px;
+            border: 3px solid #3a3a3a;
+
+        }
+        .project-container{
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .project img{
+            object-fit: cover;
+           height: 200px;
+           width: 350px;
+           
+        }
+        .project{
+           background-color:rgb(3, 22, 21);
+            border-radius: 12px;
+            border: 1px solid #3a3a3a;
+            overflow: hidden;
+            transition: transform 0.5s ease ,box-shadow 0.5s ease;
+        }
+        .project:hover{
+            transform: translateY(-10px);
+             box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+
+        }
+        .card{
+            padding: 20px;
+        }
+        .card h3{
+            color:#e0e0e0;
+            margin-bottom: 10px;
+
+        }
+        .card p{
+            color:#b8d6d2;;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .card span{
+            background-color: #1C7F74;
+            color:#e0e0e0;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            margin-right: 5px;
+        }
+        @media screen and (max-width:1200px) {
+            .main-container{
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            .sidebar{
+                position: static;
+                height: auto;
+            }
+            
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- sidebar -->
+        <div class="sidebar">
+            <!--Profile-->
+            <div class="Profile">
+                <img src="./Taiba Ramzan.jpeg" alt="">
+                <h2>Taiba Ramzan</h2>
+                <p>Web Developer</p>
+
+            </div>
+            <!--contact-->
+        <div class="contact">
+        <div class="email">
+            <h3 class="label">Email</h3>
+            <a href=" mailto:taibaramzan699@gmail.com" class="value">taibaramzan699@gmail.com</a>
+        </div>
+        <div class="phone"></div>
+        <h3 class="label">Contact no</h3>
+        <a href="tel:03281603942" class="value">03281603942</a>
+        <div class="location"></div>
+        <h3 class="label">location</h3>
+        <p class="value">Faisalabad,Pakistan</p>
+        </div>
+            <!--social -->
+            <div class="social">
+                <a href="https://www.linkedin.com/in/taiba-ramzan-5497b43b0/" ><img src="https://www.svgrepo.com/show/508852/linkedin.svg" alt=""></a>
+              
+            </div>
+        </div>
+
+
+        <!-- main content -->
+        <div class="main-content">
+            <!--navigation-->
+            <div id="navigation">
+                <nav>
+                    <a href="#about" class="active">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#portfolio">Portfolio</a>
+                </nav>
+            </div>
+
+            <!--about me-->
+            <div id="about">
+                <h2 class="heading">About Me</h2>
+                <div class="line"></div>
+                <p class="content" >I'm  a Software Engineering student with a strong passion for technology, critical thinking, and impactful communication.I specialize in building scalable, secure, and high-performance web applications that solve real-world business problems.I enjoy designing complete systems - from database architecture to backend logic and API development ensuring performance, security, and scalability at every layer.</p>
+            </div>
+
+            <!--skill-->
+            <div id="skills">
+                <h2 class="heading">Skills</h2>
+                <div class="line"></div>
+                <div class="grid-container">
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/html5.svg" alt="">
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/cplusplus.svg" alt="">
+                        <h3>C++</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/javascript.svg" alt="">
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/n8n.svg" alt="">
+                        <h3>n8n Automation</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/github.svg" alt="">
+                        <h3>Git & Github</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/python.svg" alt="">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://www.svgrepo.com/show/333609/tailwind-css.svg" alt="">
+                        <h3>Tailwind CSS</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://www.svgrepo.com/show/521303/react-16.svg" alt="">
+                        <h3>React</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!--education-->
+            <div id="education">
+                <h2 class="heading">Education</h2>
+                <div class="line"></div>
+                <div class="edtech">
+                    <div class="edfirst">
+                        <div class="year">2021-2023</div>
+                        <h3 class="degree">Intermediate,Engineering</h3>
+                        <p class="college">Punjab Group of Colleges</p>
+                        <div class="goal"></div>
+                    </div>
+                     <div class="edsecond">
+                        <div class="year">2023-2027</div>
+                        <h3 class="degree">Bachelor of Science,Computer Software Engineering</h3>
+                        <p class="college">National Textile University</p>
+                        <p class="work">Focused on Software Development,Algorithms and Web Technologies.MySQL for reliable and optimized database solutions.</p>
+                        <div class="goal"></div>
+                     </div>
+                <div class="liner"></div> 
+                </div>
+
+            </div>
+
+            <!--portfolio-->
+            <div id="portfolio">
+                <h2 class="heading">Portfolio</h2>
+                <div class="line"></div>
+                <div class="project-container">
+                    <div class="project">
+                        <img src="https://www.readability.com/wp-content/uploads/2025/07/Advantages-And-Disadvantages-Of-Blogging-For-Business-860x484.png" alt="">
+                        <div class="card">
+                            <h3>Blog Management System</h3>
+                            <p>A fully Responsive online system build with modern design principles.</p>
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="https://wb.rentok.com/wp-content/uploads/2023/06/Best-hostel-management-system-software-in-India-2023-1.png" alt="">
+                        <div class="card">
+                            <h3>Hostel Management System</h3>
+                            <p>A Hostel Management System is a digital platform that automates administrative tasks.</p>
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="https://www.readability.com/wp-content/uploads/2025/07/Advantages-And-Disadvantages-Of-Blogging-For-Business-860x484.png" alt="">
+                        <div class="card">
+                            <h3>Blog Management System</h3>
+                            <p>A fully Responsive online system build with modern design principles.</p>
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="https://www.readability.com/wp-content/uploads/2025/07/Advantages-And-Disadvantages-Of-Blogging-For-Business-860x484.png" alt="">
+                        <div class="card">
+                            <h3>Blog Management System</h3>
+                            <p>A fully Responsive online system build with modern design principles.</p>
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
