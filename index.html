@@ -741,19 +741,6 @@ section {
   border: 1px solid rgba(26,188,156,0.2);
 }
 
-.proj-link {
-  font-size: 11px;
-  color: var(--muted);
-  text-decoration: none;
-  transition: 0.2s;
-  white-space: nowrap;
-  margin-left: 8px;
-}
-
-.proj-link:hover {
-  color: var(--teal-light);
-}
-
 
 /* ──────────────────────────────────────────
    AI ASSISTANT WIDGET
@@ -1263,11 +1250,11 @@ footer {
 
   <div class="stats-bar fade-in" id="about">
     <div class="stat-item">
-      <div class="stat-num">2+</div>
+      <div class="stat-num">3+</div>
       <div class="stat-label">Years Coding</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">5+</div>
+      <div class="stat-num">6+</div>
       <div class="stat-label">Projects Built</div>
     </div>
     <div class="stat-item">
@@ -1432,21 +1419,41 @@ footer {
 
       <div class="proj-card">
         <img class="proj-img"
-          src="./images/Aichatbot.jpeg"
-          alt="SkillBot AI Chatbot preview">
+          src="./images/ai learning.jpeg"
+          alt="AI Learning Companion preview">
         <div class="proj-body">
-          <div class="proj-title">SkillBot — AI Chatbot</div>
+          <div class="proj-title">AI Learning Companion</div>
           <div class="proj-desc">
-            AI-powered chatbot featuring secure authentication, persistent conversation history, and intelligent responses powered by the Gemini API. Built with Flask REST APIs to deliver fast, interactive, and reliable user experiences.
+            An AI-driven learning assistant built with TypeScript that helps students study smarter through personalized explanations, quizzes, and progress tracking, all in a modern, responsive interface.
+          </div>
+          <div class="proj-footer">
+            <div class="tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">AI</span>
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <img class="proj-img"
+          src="./images/Aichatbot.jpeg"
+          alt="Vyntra AI Chatbot preview">
+        <div class="proj-body">
+          <div class="proj-title">Vyntra — AI Chatbot</div>
+          <div class="proj-desc">
+            An AI-powered chatbot built with Python, Streamlit, and the Google Gemini API. It delivers fast, context-aware responses through a clean, interactive chat interface.
           </div>
           <div class="proj-footer">
             <div class="tags">
               <span class="tag">Python</span>
-              <span class="tag">Flask</span>
+              <span class="tag">Streamlit</span>
               <span class="tag">Gemini AI</span>
-              <span class="tag">Auth</span>
+              <span class="tag">Authentication</span>
             </div>
-            <a href="#" class="proj-link">View &rarr;</a>
           </div>
         </div>
       </div>
@@ -1467,7 +1474,6 @@ footer {
               <span class="tag">Dart</span>
               <span class="tag">Firestore</span>
             </div>
-            <a href="#" class="proj-link">View &rarr;</a>
           </div>
         </div>
       </div>
@@ -1487,7 +1493,6 @@ footer {
               <span class="tag">API</span>
               <span class="tag">Automation</span>
             </div>
-            <a href="#" class="proj-link">View &rarr;</a>
           </div>
         </div>
       </div>
@@ -1507,7 +1512,6 @@ footer {
               <span class="tag">CSS</span>
               <span class="tag">JS</span>
             </div>
-            <a href="#" class="proj-link">View &rarr;</a>
           </div>
         </div>
       </div>
@@ -1527,7 +1531,6 @@ footer {
               <span class="tag">CSS</span>
               <span class="tag">MySQL</span>
             </div>
-            <a href="#" class="proj-link">View &rarr;</a>
           </div>
         </div>
       </div>
@@ -1630,7 +1633,7 @@ footer {
         </div>
       </a>
 
-      <a href="https://github.com/taibaramzan699-ops/taibaramzan699-ops.github.io" target="_blank" rel="noopener" class="contact-card">
+      <a href="https://github.com/taibaramzan699-ops" target="_blank" rel="noopener" class="contact-card">
         <div class="contact-icon">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
@@ -1667,8 +1670,6 @@ footer {
 /* ──────────────────────────────────────────
    AI ASSISTANT — SYSTEM CONTEXT
    Kept for reference / future backend use.
-   Describes Taiba's profile in case you wire
-   this up to a real model via a server proxy.
    ────────────────────────────────────────── */
 var AI_SYSTEM_PROMPT =
   "You are an AI assistant for Taiba Ramzan's personal portfolio website. " +
@@ -1682,18 +1683,21 @@ var AI_SYSTEM_PROMPT =
   "Email: taibaramzan699@gmail.com | Phone: +92 315 775 7586\n\n" +
 
   "SKILLS:\n" +
-  "Frontend: React.js, JavaScript ES6+, HTML5, CSS3, Tailwind CSS, Redux\n" +
-  "Backend:  Node.js, Express.js, REST APIs, JWT Authentication\n" +
-  "Database: MongoDB, Mongoose, MySQL\n" +
-  "Tools:    Git, GitHub, Python, C++, n8n Automation, Docker basics\n\n" +
+  "Frontend: React.js, Next.js, TypeScript, JavaScript ES6+, HTML5, CSS3, Tailwind CSS, Redux\n" +
+  "Backend:  Node.js, Express.js, REST APIs, JWT Authentication, Python, Streamlit\n" +
+  "Mobile:   Flutter, Dart, Firebase\n" +
+  "Database: MongoDB, Mongoose, MySQL, Firestore\n" +
+  "Tools:    Git, GitHub, Python, C++, n8n Automation, Gemini API, Docker basics\n\n" +
 
   "PROJECTS:\n" +
-  "1. Blog Management System (HTML, CSS, JS)\n" +
-  "2. Hostel Management System (HTML, CSS, MySQL)\n" +
-  "3. Full-Stack MERN App with JWT auth + MongoDB + React\n" +
-  "4. n8n Automation Workflow with API integrations\n\n" +
+  "1. AI Learning Companion (TypeScript, React, Next.js, Python, AI) - helps students study with personalized explanations, quizzes, and progress tracking\n" +
+  "2. Vyntra AI Chatbot (Python, Streamlit, Gemini AI, Authentication) - context-aware chatbot with a clean chat interface\n" +
+  "3. Skill Builder App (Flutter, Firebase, Dart, Firestore) - e-learning app with course management, lecture tracking, Google auth, community, and real-time progress\n" +
+  "4. n8n Automation Workflow (n8n, API, Automation) - automated workflows connecting APIs and services\n" +
+  "5. Blog Management System (HTML, CSS, JS) - create, edit, delete, and organize blog posts\n" +
+  "6. Hostel Management System (HTML, CSS, MySQL) - room allocation, resident records, and billing\n\n" +
 
-  "STRENGTHS: Strong passion for scalable full-stack apps, clean architecture, " +
+  "STRENGTHS: Strong passion for scalable full-stack apps, AI-powered products, clean architecture, " +
   "security-first mindset, open to freelance and internships.";
 
 
@@ -1702,44 +1706,68 @@ var AI_SYSTEM_PROMPT =
    ────────────────────────────────────────── */
 var FALLBACK_RESPONSES = [
   {
+    keywords: ['learning companion','study','quiz','tutor'],
+    reply: "AI Learning Companion is Taiba's TypeScript-based study assistant, built with React, Next.js, and Python. It gives students personalized explanations, quizzes, and progress tracking in a modern, responsive interface."
+  },
+  {
+    keywords: ['chatbot','vyntra','gemini','streamlit'],
+    reply: "Vyntra is an AI chatbot Taiba built with Python, Streamlit, and the Google Gemini API. It gives fast, context-aware responses in a clean chat interface, with authentication included."
+  },
+  {
+    keywords: ['flutter','firebase','dart','mobile','skill builder','e-learning'],
+    reply: "Skill Builder is a Flutter and Firebase e-learning app. It includes course management, lecture tracking, Google authentication, community interaction, and real-time progress monitoring."
+  },
+  {
+    keywords: ['n8n','automation','workflow'],
+    reply: "Taiba designed automated workflows with n8n that connect APIs, streamline repetitive tasks, and process data in real time across multiple services."
+  },
+  {
+    keywords: ['blog'],
+    reply: "The Blog Management System is a responsive platform built with HTML, CSS, and JavaScript where users can create, edit, delete, and organize blog posts."
+  },
+  {
+    keywords: ['hostel'],
+    reply: "The Hostel Management System, built with HTML, CSS, and MySQL, handles room allocation, resident records, billing, and other administrative tasks."
+  },
+  {
     keywords: ['mern','stack','experience','full stack','fullstack'],
-    reply: "Taiba has 2+ years of hands-on MERN stack experience. She builds complete applications using MongoDB, Express.js, React.js, and Node.js — plus JWT authentication for secure access."
+    reply: "Taiba has 2+ years of hands-on MERN stack experience. She builds complete applications using MongoDB, Express.js, React.js, and Node.js, plus JWT authentication for secure access."
   },
   {
     keywords: ['freelance','hire','available','availability','work'],
-    reply: "Yes! Taiba is actively available for freelance projects, internships, and collaborations. Reach her at taibaramzan699@gmail.com or +92 328 1603942."
+    reply: "Yes! Taiba is actively available for freelance projects, internships, and collaborations. Reach her at taibaramzan699@gmail.com or +92 315 775 7586."
   },
   {
     keywords: ['project','projects','portfolio','built'],
-    reply: "Taiba has built 5+ projects including a Blog Management System, a Hostel Management System with MySQL, a Full-Stack MERN app with JWT auth, and an n8n Automation Workflow."
+    reply: "Taiba has built 6 projects: an AI Learning Companion, Vyntra AI Chatbot, Skill Builder App (Flutter + Firebase), an n8n Automation Workflow, a Blog Management System, and a Hostel Management System."
   },
   {
     keywords: ['stand out','different','unique','special','strong','best'],
-    reply: "What sets Taiba apart is her security-first mindset, clean architecture approach, and ability to handle the complete stack — from database design to pixel-perfect UIs."
+    reply: "What sets Taiba apart is her mix of full-stack skills and AI integration, along with a security-first mindset and clean architecture, from database design to polished UIs."
   },
   {
     keywords: ['skill','skills','technology','tech','know','language'],
-    reply: "Taiba is skilled in React.js, Node.js, Express.js, MongoDB, MySQL, JavaScript, Tailwind CSS, Redux, JWT Auth, Python, C++, Git, n8n Automation, and Docker basics."
+    reply: "Taiba works with React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, MySQL, Flutter, Firebase, Python, Tailwind CSS, Redux, JWT Auth, C++, Git, n8n, and the Gemini API."
   },
   {
-    keywords: ['education','university','study','degree','college','ntu'],
+    keywords: ['education','university','degree','college','ntu'],
     reply: "Taiba is pursuing a BSc in Computer Software Engineering at National Textile University, Faisalabad (2023–2027). Before that she completed Intermediate Engineering from Punjab Group of Colleges."
   },
   {
     keywords: ['contact','email','phone','reach','message'],
-    reply: "You can contact Taiba via email at taibaramzan699@gmail.com or call/WhatsApp her at +92 328 1603942. She's also on LinkedIn and GitHub."
+    reply: "You can contact Taiba via email at taibaramzan699@gmail.com or call/WhatsApp her at +92 315 775 7586. She's also on LinkedIn and GitHub."
   },
   {
-    keywords: ['react','javascript','frontend','ui'],
-    reply: "Taiba builds responsive UIs with React.js, Redux, HTML5, CSS3, and Tailwind CSS. She writes clean modern JavaScript (ES6+) for dynamic web experiences."
+    keywords: ['react','javascript','frontend','ui','typescript','next'],
+    reply: "Taiba builds responsive UIs with React.js, Next.js, TypeScript, Redux, HTML5, CSS3, and Tailwind CSS, writing clean modern JavaScript (ES6+) for dynamic web experiences."
   },
   {
     keywords: ['node','express','backend','api','server'],
-    reply: "On the backend, Taiba uses Node.js with Express.js to build RESTful APIs with JWT authentication, middleware, and clean routing structures."
+    reply: "On the backend, Taiba uses Node.js with Express.js to build RESTful APIs with JWT authentication, middleware, and clean routing structures. She also works with Python for AI projects."
   },
   {
-    keywords: ['mongodb','database','mysql','mongoose'],
-    reply: "Taiba works with MongoDB and Mongoose for NoSQL database design, and MySQL for relational databases. She designs efficient schemas for both."
+    keywords: ['mongodb','database','mysql','mongoose','firestore'],
+    reply: "Taiba works with MongoDB and Mongoose for NoSQL design, MySQL for relational databases, and Firestore for real-time data in her Flutter app."
   }
 ];
 
@@ -1799,6 +1827,9 @@ function sleep(ms) {
 }
 
 
+/* ──────────────────────────────────────────
+   AI ASSISTANT — SEND MESSAGE
+   ────────────────────────────────────────── */
 async function sendMsg() {
   var text = aiInput.value.trim();
   if (!text) return;
@@ -1820,22 +1851,28 @@ async function sendMsg() {
   /* Show typing indicator */
   var typingEl = appendTypingIndicator();
 
-  await sleep(600);
-  var reply = getFallbackReply(text);
+  try {
+    await sleep(600);
+    var reply = getFallbackReply(text);
 
-  /* Remove typing indicator, show reply */
-  typingEl.remove();
-  appendMessage(reply, 'ai');
+    /* Remove typing indicator, show reply */
+    typingEl.remove();
+    appendMessage(reply, 'ai');
 
-  /* Add assistant reply to history for context */
-  chatHistory.push({ role: 'assistant', content: reply });
-  if (chatHistory.length > MAX_HISTORY) {
-    chatHistory = chatHistory.slice(chatHistory.length - MAX_HISTORY);
+    /* Add assistant reply to history for context */
+    chatHistory.push({ role: 'assistant', content: reply });
+    if (chatHistory.length > MAX_HISTORY) {
+      chatHistory = chatHistory.slice(chatHistory.length - MAX_HISTORY);
+    }
+  } catch (err) {
+    typingEl.remove();
+    appendMessage("Sorry, something went wrong. Please try again.", 'ai');
+    console.error(err);
+  } finally {
+    /* Re-enable input */
+    sendBtn.disabled = false;
+    aiInput.focus();
   }
-
-  /* Re-enable input */
-  sendBtn.disabled = false;
-  aiInput.focus();
 }
 
 /* Handle quick-chip clicks */
@@ -1870,6 +1907,10 @@ document.addEventListener('click', function (event) {
   }
 });
 
+
+/* ──────────────────────────────────────────
+   FADE-IN ON SCROLL
+   ────────────────────────────────────────── */
 var fadeObserver = new IntersectionObserver(
   function (entries) {
     entries.forEach(function (entry) {
@@ -1886,6 +1927,9 @@ document.querySelectorAll('.fade-in').forEach(function (el) {
 });
 
 
+/* ──────────────────────────────────────────
+   ACTIVE NAV LINK ON SCROLL
+   ────────────────────────────────────────── */
 var navObserver = new IntersectionObserver(
   function (entries) {
     entries.forEach(function (entry) {
